@@ -1,0 +1,71 @@
+{
+  "QueryResult": {
+    "_rallyAPIMajor": "2",
+    "_rallyAPIMinor": "0",
+    "Errors": [
+
+    ],
+    "Warnings": [
+
+    ],
+    "TotalResultCount": 6,
+    "StartIndex": 1,
+    "PageSize": 200,
+    "Results": [
+      {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "null",
+        "_refObjectUUID": "",
+        "_objectVersion": "0",
+        "StringValue": "",
+        "_type": "AllowedAttributeValue"
+      },
+      {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/36321740976",
+        "_refObjectUUID": "",
+        "_objectVersion": "0",
+        "StringValue": "a-batsyleu",
+        "_type": "AllowedAttributeValue"
+      },
+      {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/36967570585",
+        "_refObjectUUID": "",
+        "_objectVersion": "0",
+        "StringValue": "kovalec.dmitry",
+        "_type": "AllowedAttributeValue"
+      },
+      {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/38414947195",
+        "_refObjectUUID": "",
+        "_objectVersion": "0",
+        "StringValue": "volha_yermalovich",
+        "_type": "AllowedAttributeValue"
+      },
+      {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/39456742241",
+        "_refObjectUUID": "",
+        "_objectVersion": "0",
+        "StringValue": "marina_tomenko",
+        "_type": "AllowedAttributeValue"
+      },
+      {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/39818424530",
+        "_refObjectUUID": "",
+        "_objectVersion": "0",
+        "StringValue": "sviatlana_kashtsialian",
+        "_type": "AllowedAttributeValue"
+      }
+    ]
+  }
+}

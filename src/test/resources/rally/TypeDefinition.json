@@ -1,0 +1,33 @@
+{
+  "QueryResult": {
+    "_rallyAPIMajor": "2",
+    "_rallyAPIMinor": "0",
+    "Errors": [
+    ],
+    "Warnings": [
+      "It is no longer necessary to append \".js\" to WSAPI resources."
+    ],
+    "TotalResultCount": 1,
+    "StartIndex": 1,
+    "PageSize": 200,
+    "Results": [
+      {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/typedefinition/36321741237",
+        "_refObjectUUID": "407c2e5a-2d8a-4711-ad77-5ec10e8d8a5f",
+        "_objectVersion": "1",
+        "_refObjectName": "Defect",
+        "ObjectID": 36321741237,
+        "Attributes": {
+          "_rallyAPIMajor": "2",
+          "_rallyAPIMinor": "0",
+          "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/TypeDefinition/36321741237/Attributes",
+          "_type": "AttributeDefinition",
+          "Count": 73
+        },
+        "_type": "TypeDefinition"
+      }
+    ]
+  }
+}

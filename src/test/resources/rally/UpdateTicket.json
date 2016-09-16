@@ -1,0 +1,181 @@
+{
+  "OperationResult": {
+    "_rallyAPIMajor": "2",
+    "_rallyAPIMinor": "0",
+    "Errors": [
+
+    ],
+    "Warnings": [
+      "It is no longer necessary to append \".js\" to WSAPI resources."
+    ],
+    "Object": {
+      "_rallyAPIMajor": "2",
+      "_rallyAPIMinor": "0",
+      "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/defect/51333816331",
+      "_refObjectUUID": "a6193c21-78dd-47a3-a062-9e412748ac9e",
+      "_objectVersion": "5",
+      "_refObjectName": "sdfsfsfs",
+      "CreationDate": "2016-02-15T09:27:08.900Z",
+      "_CreatedAt": "24 minutes ago",
+      "ObjectID": 51333816331,
+      "ObjectUUID": "a6193c21-78dd-47a3-a062-9e412748ac9e",
+      "VersionId": "5",
+      "Subscription": {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/subscription/36321740845",
+        "_refObjectUUID": "c63aff62-3334-4118-8d6e-00214deaa1dc",
+        "_refObjectName": "Community (CE2014) Edition - Personal - a-batsyleu@mail.ru",
+        "_type": "Subscription"
+      },
+      "Workspace": {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/workspace/36321740982",
+        "_refObjectUUID": "946517c3-1e12-4bed-9fe3-11704ac78c3b",
+        "_refObjectName": "Workspace 1",
+        "_type": "Workspace"
+      },
+      "Changesets": {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/Defect/51333816331/Changesets",
+        "_type": "Changeset",
+        "Count": 0
+      },
+      "Description": "<div>\r\n    \r\n    \r\n            <h3>Back link to Report Portal:</h3>\r\n        <ul>\r\n                            <li><a href=\"https://localhost:8443/reportportal-ws/#epmc-tst/launches/all/all-cases-for-56c19312bfcd0b14192d3133?page.page=1&page.sort=start_time,ASC&filter.eq.has_childs=false&filter.in.status=FAILED&filter.in.type=STEP&filter.eq.launch=56c19312bfcd0b14192d3133&tab.id=allCases/log-for-56c19339bfcd0b14192d5d52\">Link to defect</a></li>\r\n                    </ul>\r\n        <br />\r\n    \r\n            <div class=\"panel\">\r\n            <div class=\"panelHeader\" style=\"border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #ccc;background-color: #6DB33F;color: #34302D;\">\r\n                <b>Test execution log</b>\r\n   </div>\r\n            <div class=\"panelContent\">\r\n                                                            <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.447 [main] DEBUG - [main] DEBUG - {TRUE } = ( is a collection containing element with text equalToIgnoringCase(\"ON DEMAND\") [as device is not of []])\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.447 [main] DEBUG - [main] DEBUG - {TRUE } =  is a collection containing element with text equalToIgnoringCase(\"ON DEMAND\") [as device is not of []]\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.447 [main] DEBUG - [main] DEBUG - {TRUE } =  is a collection containing element with text equalToIgnoringCase(\"ON DEMAND\") [as device is not of []]\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.447 [main] INFO  - PageObject - Going to user login screen\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.447 [main] DEBUG -  DEBUG - {TRUE } = ( is a collection containing element with text equalToIgnoringCase(\"ON DEMAND\") [as device is not of []])\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.447 [main] INFO  - JanrainCaptureHandler - User has not been found in DB.\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] INFO  - JanrainCaptureHandler - User has not been found in DB.\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] INFO  - LoginStepDefs - I see user login page\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] INFO  - PageObject - Going to user login screen\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] INFO  - ServerLoginScreen - Clicking submit\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] WARN  - Cannot find element with locator 'By.xpath: //div[@class='pagination-bar']'. Please, check your definitions.\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] INFO  - JanrainCaptureHandler - User has not been found in DB.\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] INFO  - ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b90867e: startup date [Fri Feb 06 15:11:53 CET 2015]; root of context hierarchy\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] DEBUG - [main] DEBUG - Webdriver screenshot captured: /Users/lgi/jenkins/workspace/android-prod-stage-regression/screenshots/16_03_15__13_49__ResultPageGridViewCategoriesGenreFilteringTest.goToOnDemandAndCheckPageAfterLogin[webdriver].png\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] INFO  - ClassPathBeanDefinitionScanner - JSR-330 'javax.inject.Named' annotation found and supported for component scanning\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] DEBUG -  DEBUG - {TRUE } = ( is a collection containing element with text equalToIgnoringCase(\"ON DEMAND\") [as device is not of []])\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] INFO  - ClassPathBeanDefinitionScanner - JSR-330 'javax.inject.Named' annotation found and supported for component scanning\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] WARN  - (TestSecurityServiceImpl.java:295) - error while creating permission data:people-suite:/people-api/com.epam.e3s.app.people.api.data.EmployeeEntity:*:READ\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] DEBUG - [main] DEBUG - {TRUE } = ( is a collection containing element with text equalToIgnoringCase(\"ON DEMAND\") [as device is not of []])\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] INFO  - LoginStepDefs - I see user login page\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] WARN  - Cannot find element with locator 'By.xpath: //div[@class='pagination-bar']'. Please, check your definitions.\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] WARN  - (CacheInstanceImpl.java:258) - Unable to rollback transaction. No active transaction or it was already rolled back\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] WARN  - Chart was loaded without progress indicator\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] INFO  - ServerLoginScreen - Clicking submit\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] WARN  - Cannot find element with locator 'By.xpath: //div[@ng-grid]'. Please, check your definitions.\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] WARN  - (TestSecurityServiceImpl.java:295) - error while creating permission data:people-suite:/people-api/com.epam.e3s.app.people.api.data.PersonEntity:*:READ\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">message</pre>\r\n                        </div>\r\n                                                  <p><img src=\"/slm/attachment/51334577185/56c19339bfcd0b14192d5e3b\" align=\"absmiddle\" height=\"366\" /><br class=\"atl-forced-newline\" /></p>\r\n                                                                 <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] ERROR - [main] [MainPageSteps.java:41] [LoggingUtils:gotoResourceAvailability_aroundBody47$advice:41] - EXCEPTION OCCURED IN [execution(MainPageSteps.gotoResourceAvailability())]\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] DEBUG - [main] DEBUG - {TRUE } =  is a collection containing element with text equalToIgnoringCase(\"ON DEMAND\") [as device is not of []]\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] INFO  - ServerLoginScreen - Clicking submit\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] INFO  - LoginStepDefs - I enter valid server name and login\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] DEBUG -  [main] DEBUG - {TRUE } =  element text equalToIgnoringCase(\"MOVIES\")\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] INFO  - CokeTestMethodListener - Test: \"Delete Account with Facebook\" (DeleteAccountWithFacebookTest#testDeleteAccountWithFacebook)\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] DEBUG -  [main] DEBUG - {TRUE } =  element text equalToIgnoringCase(\"MOVIES\")\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] WARN  - Cannot find element with locator 'By.xpath: //div[@ng-grid]'. Please, check your definitions.\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.553 [main] DEBUG - [main] DEBUG - {TRUE } = ( is a collection containing element with text equalToIgnoringCase(\"ON DEMAND\") [as device is not of []])\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">message</pre>\r\n                        </div>\r\n                                                  <p><img src=\"/slm/attachment/51334577254/56c19339bfcd0b14192d5e47\" align=\"absmiddle\" height=\"366\" /><br class=\"atl-forced-newline\" /></p>\r\n                                                                 <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.650 [main] ERROR - [main] [MainPageSteps.java:41] [LoggingUtils:gotoResourceAvailability_aroundBody47$advice:41] - EXCEPTION OCCURED IN [execution(MainPageSteps.gotoResourceAvailability())]\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.650 [main] INFO  - ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b90867e: startup date [Fri Feb 06 15:11:53 CET 2015]; root of context hierarchy\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">message</pre>\r\n                        </div>\r\n                                                  <p><img src=\"/slm/attachment/51334577260/56c19339bfcd0b14192d5e43\" align=\"absmiddle\" height=\"366\" /><br class=\"atl-forced-newline\" /></p>\r\n                                                                 <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.650 [main] ERROR - [main] [MainPageSteps.java:41] [LoggingUtils:gotoResourcePlanSummaryByCustomerPage_aroundBody77$advice:41] - EXCEPTION OCCURED IN [execution(MainPageSteps.gotoResourcePlanSummaryByCustomerPage())]\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.650 [main] INFO  - ServerLoginScreen - Clicking submit\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.650 [main] DEBUG - [main] DEBUG - Webdriver screenshot captured: /Users/lgi/jenkins/workspace/android-prod-stage-regression/screenshots/16_03_15__13_49__ResultPageGridViewCategoriesGenreFilteringTest.goToOnDemandAndCheckPageAfterLogin[webdriver].png\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.650 [main] WARN  - (TestSecurityServiceImpl.java:295) - error while creating permission data:people-suite:/people-api/com.epam.e3s.app.people.api.data.PersonEntity:*:READ\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.650 [main] DEBUG -  [main] DEBUG - {TRUE } =  element text equalToIgnoringCase(\"MOVIES\")\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.650 [main] INFO  - LoginStepDefs - I see user login page\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.650 [main] DEBUG - [main] DEBUG - {TRUE } =  is a collection containing element with text equalToIgnoringCase(\"ON DEMAND\") [as device is not of []]\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.650 [main] INFO  - JanrainCaptureHandler - User has not been found in DB.\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">11:58:33.650 [main] INFO  - PageObject - Going to user login screen\r\n</pre>\r\n                        </div>\r\n                                                                                          <div style=\"border-width: 1px;\">\r\n          <pre style=\"white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;\">java.lang.AssertionError: expected [false] but found [true]\r\norg.testng.Assert.fail(Assert.java:94)\r\norg.testng.Assert.failNotEquals(Assert.java:494)\r\norg.testng.Assert.assertFalse(Assert.java:63)\r\norg.testng.Assert.assertFalse(Assert.java:73)\r\ncom.epam.ta.reportportal.tests.Test2.testMethod1Test2(Test2.java:52)\r\nsun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\nsun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\nsun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\njava.lang.reflect.Method.invoke(Method.java:497)\r\norg.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)\r\norg.testng.internal.Invoker.invokeMethod(Invoker.java:714)\r\norg.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)\r\norg.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)\r\norg.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)\r\norg.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)\r\norg.testng.TestRunner.privateRun(TestRunner.java:767)\r\norg.testng.TestRunner.run(TestRunner.java:617)\r\norg.testng.SuiteRunner.runTest(SuiteRunner.java:334)\r\norg.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)\r\norg.testng.SuiteRunner.privateRun(SuiteRunner.java:291)\r\norg.testng.SuiteRunner.run(SuiteRunner.java:240)\r\norg.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\norg.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)\r\norg.testng.TestNG.runSuitesSequentially(TestNG.java:1224)\r\norg.testng.TestNG.runSuitesLocally(TestNG.java:1149)\r\norg.testng.TestNG.run(TestNG.java:1057)\r\ncom.epam.ta.reportportal.runner.Main.runTests(Main.java:52)\r\ncom.epam.ta.reportportal.runner.Main.main(Main.java:30)\r\nsun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\nsun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\nsun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\njava.lang.reflect.Method.invoke(Method.java:497)\r\ncom.intellij.rt.execution.application.AppMain.main(AppMain.java:144)\r\n</pre>\r\n                        </div>\r\n                                                          </div>\r\n        </div>\r\n    </div>",
+      "Discussion": {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/Defect/51333816331/Discussion",
+        "_type": "ConversationPost",
+        "Count": 0
+      },
+      "DisplayColor": null,
+      "Expedite": false,
+      "FormattedID": "DE676",
+      "LastUpdateDate": "2016-02-15T09:51:49.779Z",
+      "LatestDiscussionAgeInMinutes": null,
+      "Milestones": {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/Defect/51333816331/Milestones",
+        "_type": "Milestone",
+        "_tagsNameArray": [
+
+        ],
+        "Count": 0
+      },
+      "Name": "sdfsfsfs",
+      "Notes": "",
+      "Owner": null,
+      "Project": {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/project/36321741066",
+        "_refObjectUUID": "cc5d6aa5-a0eb-4a5f-83fe-a8849a662875",
+        "_refObjectName": "Sample Project",
+        "_type": "Project"
+      },
+      "Ready": false,
+      "RevisionHistory": {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/revisionhistory/51334577023",
+        "_refObjectUUID": "5552cf09-4221-4d30-86c8-6f4fa04b564b",
+        "_type": "RevisionHistory"
+      },
+      "Tags": {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/Defect/51333816331/Tags",
+        "_type": "Tag",
+        "_tagsNameArray": [
+
+        ],
+        "Count": 0
+      },
+      "LastBuild": null,
+      "LastRun": null,
+      "PassingTestCaseCount": 0,
+      "ScheduleState": "Defined",
+      "ScheduleStatePrefix": "D",
+      "TestCaseCount": 0,
+      "AcceptedDate": null,
+      "AffectsDoc": false,
+      "Attachments": {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/Defect/51333816331/Attachments",
+        "_type": "Attachment",
+        "Count": 3
+      },
+      "Blocked": false,
+      "BlockedReason": null,
+      "Blocker": null,
+      "ClosedDate": null,
+      "DefectSuites": {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/Defect/51333816331/DefectSuites",
+        "_type": "DefectSuite",
+        "Count": 0
+      },
+      "DragAndDropRank": "O~~wh~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+      "Duplicates": {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/Defect/51333816331/Duplicates",
+        "_type": "Defect",
+        "Count": 0
+      },
+      "Environment": "None",
+      "FixedInBuild": null,
+      "FoundInBuild": null,
+      "InProgressDate": null,
+      "Iteration": null,
+      "OpenedDate": null,
+      "Package": null,
+      "PlanEstimate": null,
+      "Priority": "None",
+      "Recycled": false,
+      "Release": null,
+      "ReleaseNote": false,
+      "Requirement": null,
+      "Resolution": "None",
+      "SalesforceCaseID": null,
+      "SalesforceCaseNumber": null,
+      "Severity": "None",
+      "State": "Submitted",
+      "SubmittedBy": null,
+      "TargetBuild": null,
+      "TargetDate": null,
+      "TaskActualTotal": 0.0,
+      "TaskEstimateTotal": 0.0,
+      "TaskRemainingTotal": 0.0,
+      "TaskStatus": "NONE",
+      "Tasks": {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/Defect/51333816331/Tasks",
+        "_type": "Task",
+        "Count": 0
+      },
+      "TestCase": null,
+      "TestCaseResult": null,
+      "TestCaseStatus": "NONE",
+      "TestCases": {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/Defect/51333816331/TestCases",
+        "_type": "TestCase",
+        "Count": 0
+      },
+      "VerifiedInBuild": null,
+      "c_Repr": null,
+      "c_Reproducible": null,
+      "c_test": null,
+      "_type": "Defect"
+    }
+  }
+}

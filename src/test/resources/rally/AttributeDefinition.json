@@ -1,0 +1,37 @@
+{
+  "QueryResult": {
+    "_rallyAPIMajor": "2",
+    "_rallyAPIMinor": "0",
+    "Errors": [
+    ],
+    "Warnings": [
+    ],
+    "TotalResultCount": 1,
+    "StartIndex": 1,
+    "PageSize": 200,
+    "Results": [
+      {
+        "_rallyAPIMajor": "2",
+        "_rallyAPIMinor": "0",
+        "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/attributedefinition/-12537",
+        "_refObjectUUID": "50d6cae3-e2be-417a-93c9-2b952db23617",
+        "_objectVersion": "1",
+        "_refObjectName": "Submitted By",
+        "ObjectID": -12537,
+        "AllowedValues": {
+          "_rallyAPIMajor": "2",
+          "_rallyAPIMinor": "0",
+          "_ref": "https://rally1.rallydev.com/slm/webservice/v2.0/AttributeDefinition/-12537/AllowedValues",
+          "_type": "AllowedAttributeValue",
+          "Count": 95
+        },
+        "ElementName": "SubmittedBy",
+        "Name": "Submitted By",
+        "ReadOnly": false,
+        "Required": false,
+        "Type": "User",
+        "_type": "AttributeDefinition"
+      }
+    ]
+  }
+}
