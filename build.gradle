@@ -20,6 +20,8 @@ apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: "spring-boot"
+apply plugin: 'findbugs'
+
 apply from: 'build-docker.gradle'
 
 description = 'EPAM Report portal. Rally Integration'

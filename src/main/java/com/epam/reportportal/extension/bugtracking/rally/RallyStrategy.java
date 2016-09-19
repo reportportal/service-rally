@@ -40,6 +40,7 @@ import static com.epam.reportportal.extension.bugtracking.rally.RallyConstants.*
 
 import java.io.IOException;
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -187,7 +188,7 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 				}
 			}
 			return fields;
-		} catch (Exception e) {
+		} catch (IOException | URISyntaxException e) {
 			throw new ReportPortalException("Unable to load ticket fields: " + e.getMessage(), e);
 		}
 	}
