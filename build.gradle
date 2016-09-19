@@ -6,6 +6,7 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
+        classpath 'com.bmuschko:gradle-docker-plugin:3.0.3'
 
     }
 }
@@ -19,11 +20,17 @@ apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: "spring-boot"
+apply from: 'build-docker.gradle'
 
 description = 'EPAM Report portal. Rally Integration'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.0'
+}
 
 dependencyManagement {
     imports {
