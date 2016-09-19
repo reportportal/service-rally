@@ -40,14 +40,14 @@ dependencyManagement {
 }
 repositories {
     mavenCentral()
-    maven { url "https://m2proxy.atlassian.com/repository/public" }
     maven { url 'https://repo.spring.io/libs-milestone' }
+    maven { url  "http://dl.bintray.com/epam/reportportal" }
 
 }
 
 dependencies {
-    /*compile 'com.epam.ta.reportportal:extension-bugtracking:2.5.2.1'
-    compile 'com.epam.ta.reportportal:commons:2.5.0.0'*/
+    compile 'com.epam.reportportal:commons-bugtracking:2.6.0'
+    compile 'com.epam.reportportal:commons:2.6.0'
 
     compile 'com.rallydev.rest:rally-rest-api:2.1.1'
 
