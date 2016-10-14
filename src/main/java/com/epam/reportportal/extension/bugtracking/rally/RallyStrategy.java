@@ -224,7 +224,7 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 			return Optional.empty();
 		List<Defect> defects = new Gson().fromJson(query.getResults(), new TypeToken<List<Defect>>() {
 		}.getType());
-		return Optional.of(defects.get(0));
+		return defects.stream().findAny();
 	}
 
 	private List<LogEntry> loadTestItemLogs(final PostTicketRQ ticketRQ) {
