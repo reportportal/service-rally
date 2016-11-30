@@ -3,6 +3,7 @@ info:
     name: Rally Service
     description: ReportPortal Rally Integration
     version: '@version@'
+    branch: '@branch@'
 
 spring:
   application:
