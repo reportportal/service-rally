@@ -1,10 +1,12 @@
 # Server Configuration
 server:
-  port: 8383
+  port: 8080
 
 # Eureka Configuration
 eureka:
   instance:
+    status-page-url-path: ${server.contextPath:}/info
+    health-check-url-path: ${server.contextPath:}/health
     hostname: ${reportportal.eureka.instance.hostname:localhost}
     metadata-map:
       extension: rally
@@ -16,7 +18,7 @@ eureka:
 # MongoDB configuration
 rp:
   mongo:
-    host: ${reportportal.mongo.host:docker.local}
+    host: ${reportportal.mongo.host:localhost}
     port: 27017
     dbName: reportportal
 #        user: user
@@ -43,3 +45,48 @@ rp:
       user:
         size: 1000
         expiration: 60
+
+spring:
+  profiles:
+    ## Default one is still Eureka
+    active: ${rp.profiles:eureka}
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        tags:
+          - urlprefix-${server.contextPath}
+          - traefik.frontend.rule=PathPrefixStrip:/rally
+          - statusPageUrlPath=${server.contextPath:}/info
+          - healthCheckUrlPath=${server.contextPath:}/health
+          - extension:rally
+        healthCheckPath: ${server.contextPath}/health
+        ip-address: 10.200.10.1
+        prefer-ip-address: true
+
+
+## Consul as service registry
+---
+spring:
+  profiles: eureka
+  cloud:
+    consul:
+      enabled: false
+      discovery:
+        register: false
+
+## Consul as service registry
+---
+spring:
+  profiles: consul
+  cloud:
+    consul:
+      enabled: true
+      discovery:
+        register: true
+eureka:
+  client:
+    register-with-eureka: false
+    enabled: false
+---

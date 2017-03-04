@@ -84,7 +84,14 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 	@Autowired
 	private TemplateEngine templateEngine;
 
+	private Gson gson;
+
 	public abstract RallyRestApi getRallyRestApi(URI server, String apiKey);
+
+	public RallyStrategy() {
+		gson = new Gson();
+	}
+
 
 	@Override
 	public boolean checkConnection(ExternalSystem externalSystem) {
@@ -179,10 +186,10 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 
 	private List<AllowedAttributeValue> findAllowedAttributeValues(RallyRestApi restApi, AttributeDefinition attributeDefinition)
 			throws IOException {
-		QueryRequest allowedValuesRequest = new QueryRequest((JsonObject) new Gson().toJsonTree(attributeDefinition.getAllowedValue()));
+		QueryRequest allowedValuesRequest = new QueryRequest((JsonObject) gson.toJsonTree(attributeDefinition.getAllowedValue()));
 		allowedValuesRequest.setFetch(new Fetch(STRING_VALUE));
 		QueryResponse allowedValuesResponse = restApi.query(allowedValuesRequest);
-		return new Gson().fromJson(allowedValuesResponse.getResults(), new TypeToken<List<AllowedAttributeValue>>() {
+		return gson.fromJson(allowedValuesResponse.getResults(), new TypeToken<List<AllowedAttributeValue>>() {
 		}.getType());
 	}
 
@@ -193,10 +200,10 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 		QueryResponse typeDefQueryResponse = restApi.query(typeDefRequest);
 		JsonObject typeDefJsonObject = typeDefQueryResponse.getResults().get(0).getAsJsonObject();
 		QueryRequest attributeRequest = new QueryRequest(
-				(JsonObject) new Gson().toJsonTree(new Gson().fromJson(typeDefJsonObject, TypeDefinition.class).getAttributeDefinition()));
+				(JsonObject) gson.toJsonTree(gson.fromJson(typeDefJsonObject, TypeDefinition.class).getAttributeDefinition()));
 		attributeRequest.setFetch(new Fetch(ALLOWED_VALUES, ELEMENT_NAME, NAME, REQUIRED, TYPE, OBJECT_ID, READ_ONLY));
 		QueryResponse attributesQueryResponse = restApi.query(attributeRequest);
-		return new Gson().fromJson(attributesQueryResponse.getResults(), new TypeToken<List<AttributeDefinition>>() {
+		return gson.fromJson(attributesQueryResponse.getResults(), new TypeToken<List<AttributeDefinition>>() {
 		}.getType());
 	}
 
@@ -206,7 +213,7 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 		QueryResponse query = restApi.query(defectRequest);
 		if (!query.wasSuccessful())
 			return Optional.empty();
-		List<Defect> defects = new Gson().fromJson(query.getResults(), new TypeToken<List<Defect>>() {
+		List<Defect> defects = gson.fromJson(query.getResults(), new TypeToken<List<Defect>>() {
 		}.getType());
 		return defects.stream().findAny();
 	}
@@ -269,7 +276,7 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 		CreateRequest createRequest = new CreateRequest(DEFECT, newDefect);
 		CreateResponse createResponse = restApi.create(createRequest);
 		checkResponse(createResponse);
-		return new Gson().fromJson(createResponse.getObject(), Defect.class);
+		return gson.fromJson(createResponse.getObject(), Defect.class);
 	}
 
 	private void checkResponse(Response response) {
@@ -296,7 +303,7 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 		CreateRequest attachmentCreateRequest = new CreateRequest(ATTACHMENT, attachment);
 		CreateResponse attachmentResponse = restApi.create(attachmentCreateRequest);
 		checkResponse(attachmentResponse);
-		return new Gson().fromJson(attachmentResponse.getObject(), RallyObject.class);
+		return gson.fromJson(attachmentResponse.getObject(), RallyObject.class);
 	}
 
 	private Defect updateDescription(String description, Defect defect, RallyRestApi restApi) throws IOException {
@@ -305,7 +312,7 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 		UpdateRequest updateRequest = new UpdateRequest(defect.getRef(), jsonObject);
 		UpdateResponse update = restApi.update(updateRequest);
 		checkResponse(update);
-		return new Gson().fromJson(update.getObject(), Defect.class);
+		return gson.fromJson(update.getObject(), Defect.class);
 	}
 
 	private Ticket buildTicket(Defect defect, ExternalSystem externalSystem) {
