@@ -47,9 +47,6 @@ rp:
         expiration: 60
 
 spring:
-  profiles:
-    ## Default one is still Eureka
-    active: ${rp.profiles:eureka}
   cloud:
     consul:
       host: localhost
