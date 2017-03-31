@@ -4,6 +4,7 @@ info:
     description: ReportPortal Rally Integration
     version: '@version@'
     branch: '@branch@'
+    repo: '@repo@'
 
 spring:
   application:
