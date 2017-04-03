@@ -56,7 +56,7 @@ spring:
       discovery:
         tags:
           - urlprefix-${server.context-path:}/rally opts strip=/rally
-          - traefik.frontend.rule=PathPrefixStrip:${server.context-path:/}
+          - traefik.frontend.rule=PathPrefixStrip:${server.context-path:/}rally
           - statusPageUrlPath=${server.contextPath:}/info
           - healthCheckUrlPath=${server.contextPath:}/health
           - extension=rally
