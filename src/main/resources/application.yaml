@@ -61,8 +61,6 @@ spring:
           - healthCheckUrlPath=${server.contextPath:}/health
           - extension=rally
         healthCheckPath: ${server.contextPath:}/health
-        ip-address: 10.200.10.1
-        prefer-ip-address: true
         register: false
       enabled: false
 
