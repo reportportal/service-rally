@@ -20,15 +20,19 @@
  */ 
 package com.epam.reportportal.extension.bugtracking.rally;
 
+import com.epam.reportportal.commons.template.FreemarkerTemplateEngine;
+import com.epam.reportportal.commons.template.TemplateEngine;
 import com.epam.reportportal.extension.bugtracking.BugTrackingApp;
 import com.epam.reportportal.extension.bugtracking.ExternalSystemStrategy;
-import com.epam.reportportal.commons.template.VelocityTemplateEngine;
+import com.google.common.base.Charsets;
 import com.rallydev.rest.RallyRestApi;
+import freemarker.template.TemplateExceptionHandler;
+import freemarker.template.Version;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.ui.velocity.VelocityEngineFactoryBean;
 
 import java.net.URI;
+import java.util.Locale;
 
 /**
  * Entry point for Rally integration service
@@ -49,17 +53,20 @@ public class RallyServiceApp extends BugTrackingApp {
 	}
 
 	@Bean
-	public VelocityEngineFactoryBean getVelocityEngineFactory() {
-		VelocityEngineFactoryBean velocityEngineFactory = new VelocityEngineFactoryBean();
-		velocityEngineFactory.setResourceLoaderPath("classpath:/");
-		velocityEngineFactory.setPreferFileSystemAccess(false);
-		return velocityEngineFactory;
+	public TemplateEngine getTemplateEngine() {
+
+		Version version = new Version(2, 3, 25);
+		freemarker.template.Configuration cfg = new freemarker.template.Configuration(version);
+
+		cfg.setClassForTemplateLoading(RallyServiceApp.class, "/");
+
+		cfg.setIncompatibleImprovements(version);
+		cfg.setDefaultEncoding(Charsets.UTF_8.toString());
+		cfg.setLocale(Locale.US);
+		cfg.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
+		return new FreemarkerTemplateEngine(cfg);
 	}
 
-	@Bean
-	public VelocityTemplateEngine getVelocityTemplateEngine() {
-		return new VelocityTemplateEngine(getVelocityEngineFactory().getObject());
-	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(RallyServiceApp.class);

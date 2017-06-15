@@ -57,15 +57,16 @@ repositories {
 dependencies {
     if (releaseMode) {
         compile 'com.epam.reportportal:commons-bugtracking:3.0.0-BETA-3'
-        compile 'com.epam.reportportal:commons:3.0.0-BETA-2'
+        compile 'com.epam.reportportal:commons:3.0.1'
 
     } else {
         compile('com.github.reportportal:commons-bugtracking:3.0.0-BETA-3')
-        compile 'com.epam.reportportal:commons:3.0.0-BETA-2'
+        compile 'com.epam.reportportal:commons:3.0.1'
     }
 
 
     compile 'com.rallydev.rest:rally-rest-api:2.2.1'
+    compile 'org.springframework.boot:spring-boot-starter-freemarker'
 
     testCompile 'org.hamcrest:hamcrest-all:1.3'
     testCompile 'junit:junit:4.12'
