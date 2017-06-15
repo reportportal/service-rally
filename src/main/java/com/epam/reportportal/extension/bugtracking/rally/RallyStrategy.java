@@ -69,7 +69,7 @@ import static com.epam.reportportal.extension.bugtracking.rally.RallyConstants.*
 public abstract class RallyStrategy implements ExternalSystemStrategy {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(RallyStrategy.class);
-	private static final String BUG_TEMPLATE_PATH = "bug_template.vm";
+	private static final String BUG_TEMPLATE_PATH = "bug_template.ftl";
 
 	@Autowired
 	private LogRepository logRepository;
