@@ -57,11 +57,11 @@ repositories {
 dependencies {
     if (releaseMode) {
         compile 'com.epam.reportportal:commons-bugtracking:3.0.0'
-        compile 'com.epam.reportportal:commons:3.0.0'
+        compile 'com.epam.reportportal:commons:3.0.1'
 
     } else {
         compile('com.github.reportportal:commons-bugtracking:3.0.0')
-        compile 'com.github.reportportal:commons:3.0.0'
+        compile 'com.github.reportportal:commons:3.0.1'
     }
 
 
