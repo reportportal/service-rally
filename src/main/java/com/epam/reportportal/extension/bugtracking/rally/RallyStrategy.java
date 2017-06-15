@@ -272,9 +272,14 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 		newDefect.addProperty(DESCRIPTION,
 				newDefect.get(DESCRIPTION) != null ? (newDefect.get(DESCRIPTION).getAsString() + "<br>" + description) : description);
 		CreateRequest createRequest = new CreateRequest(DEFECT, newDefect);
-		CreateResponse createResponse = restApi.create(createRequest);
-		checkResponse(createResponse);
-		return gson.fromJson(createResponse.getObject(), Defect.class);
+		try {
+			CreateResponse createResponse = restApi.create(createRequest);
+			checkResponse(createResponse);
+			return gson.fromJson(createResponse.getObject(), Defect.class);
+		}  catch (Exception e){
+			LOGGER.error("Errored request: {}", gson.toJson(createRequest));
+			throw e;
+		}
 	}
 
 	private void checkResponse(Response response) {
