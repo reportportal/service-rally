@@ -14,8 +14,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://${reportportal.eureka.hostname:localhost}:8761/eureka/
-    enabled: true
-    register-with-eureka: true
+    enabled: false
+    register-with-eureka: false
 
 # MongoDB configuration
 rp:
@@ -61,8 +61,8 @@ spring:
           - healthCheckUrlPath=${server.contextPath:}/health
           - extension=rally
         healthCheckPath: ${server.contextPath:}/health
-        register: false
-      enabled: false
+        register: true
+      enabled: true
 
 logging:
   level:
@@ -82,4 +82,18 @@ eureka:
   client:
     register-with-eureka: false
     enabled: false
+
+## Eureka as service registry
+---
+spring:
+  profiles: eureka
+  cloud:
+    consul:
+      enabled: false
+      discovery:
+        register: false
+eureka:
+  client:
+    register-with-eureka: true
+    enabled: true
 ---
