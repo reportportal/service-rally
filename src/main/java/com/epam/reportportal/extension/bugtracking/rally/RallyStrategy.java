@@ -17,25 +17,11 @@
  * 
  * You should have received a copy of the GNU General Public License
  * along with Report Portal.  If not, see <http://www.gnu.org/licenses/>.
- */ 
+ */
 package com.epam.reportportal.extension.bugtracking.rally;
 
-import static com.epam.reportportal.extension.bugtracking.rally.RallyConstants.*;
-
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
+import com.epam.reportportal.commons.template.TemplateEngine;
 import com.epam.reportportal.extension.bugtracking.ExternalSystemStrategy;
-import com.google.common.io.ByteStreams;
-import org.apache.commons.codec.binary.Base64;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.epam.ta.reportportal.database.BinaryData;
 import com.epam.ta.reportportal.database.DataStorage;
 import com.epam.ta.reportportal.database.dao.LogRepository;
@@ -44,11 +30,11 @@ import com.epam.ta.reportportal.database.entity.ExternalSystem;
 import com.epam.ta.reportportal.database.entity.Log;
 import com.epam.ta.reportportal.database.entity.item.TestItem;
 import com.epam.ta.reportportal.exception.ReportPortalException;
-import com.epam.reportportal.commons.template.TemplateEngine;
 import com.epam.ta.reportportal.ws.model.externalsystem.AllowedValue;
 import com.epam.ta.reportportal.ws.model.externalsystem.PostFormField;
 import com.epam.ta.reportportal.ws.model.externalsystem.PostTicketRQ;
 import com.epam.ta.reportportal.ws.model.externalsystem.Ticket;
+import com.google.common.io.ByteStreams;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
@@ -63,6 +49,19 @@ import com.rallydev.rest.response.UpdateResponse;
 import com.rallydev.rest.util.Fetch;
 import com.rallydev.rest.util.QueryFilter;
 import com.rallydev.rest.util.Ref;
+import org.apache.commons.codec.binary.Base64;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import static com.epam.reportportal.extension.bugtracking.rally.RallyConstants.*;
 
 /**
  * @author Dzmitry_Kavalets
@@ -70,7 +69,7 @@ import com.rallydev.rest.util.Ref;
 public abstract class RallyStrategy implements ExternalSystemStrategy {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(RallyStrategy.class);
-	private static final String BUG_TEMPLATE_PATH = "bug_template.vm";
+	private static final String BUG_TEMPLATE_PATH = "bug_template.ftl";
 
 	@Autowired
 	private LogRepository logRepository;
@@ -91,7 +90,6 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 	public RallyStrategy() {
 		gson = new Gson();
 	}
-
 
 	@Override
 	public boolean checkConnection(ExternalSystem externalSystem) {
@@ -274,9 +272,14 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 		newDefect.addProperty(DESCRIPTION,
 				newDefect.get(DESCRIPTION) != null ? (newDefect.get(DESCRIPTION).getAsString() + "<br>" + description) : description);
 		CreateRequest createRequest = new CreateRequest(DEFECT, newDefect);
-		CreateResponse createResponse = restApi.create(createRequest);
-		checkResponse(createResponse);
-		return gson.fromJson(createResponse.getObject(), Defect.class);
+		try {
+			CreateResponse createResponse = restApi.create(createRequest);
+			checkResponse(createResponse);
+			return gson.fromJson(createResponse.getObject(), Defect.class);
+		}  catch (Exception e){
+			LOGGER.error("Errored request: {}", gson.toJson(createRequest));
+			throw e;
+		}
 	}
 
 	private void checkResponse(Response response) {
@@ -317,8 +320,8 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 
 	private Ticket buildTicket(Defect defect, ExternalSystem externalSystem) {
 		Ticket ticket = new Ticket();
-		String link = externalSystem.getUrl() + "/#/" + Ref.getOidFromRef(defect.getProject().getRef()) + "/detail/defect/"
-				+ defect.getObjectId();
+		String link = externalSystem.getUrl() + "/#/" + Ref.getOidFromRef(defect.getProject().getRef()) + "/detail/defect/" + defect
+				.getObjectId();
 		ticket.setId(defect.getFormattedId());
 		ticket.setSummary(defect.getName());
 		ticket.setTicketUrl(link);
