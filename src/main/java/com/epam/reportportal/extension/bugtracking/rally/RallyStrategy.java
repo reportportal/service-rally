@@ -145,6 +145,11 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 	}
 
 	@Override
+	public List<String> getIssueTypes(ExternalSystem system) {
+		return Collections.singletonList(DEFECT);
+	}
+
+	@Override
 	public List<PostFormField> getTicketFields(String issueType, ExternalSystem externalSystem) {
 
 		try (RallyRestApi restApi = getRallyRestApi(new URI(externalSystem.getUrl()), externalSystem.getAccessKey())) {
