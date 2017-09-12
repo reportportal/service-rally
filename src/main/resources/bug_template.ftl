@@ -3,13 +3,13 @@
         ${description}
     </#if>
 
-##  if RP contains some comments for test item
+<#--if RP contains some comments for test item-->
     <#if comments??>
 		<h3>Test Item comments:</h3>
 		${comments}
     </#if>
 
-##  if backlinks are present
+<#--##  if backlinks are present-->
     <#if $backLinks??>
         <h3>Back link to Report Portal:</h3>
         <ul type="square">
@@ -20,7 +20,7 @@
         <br>
     </#if>
 
-##  Complex block with logic in velocity. Consider to move all logic in JAVA code.
+  <#--Complex block with logic in velocity. Consider to move all logic in JAVA code.-->
         <#if logs?? && logs?size != 0>
         <div class="panel">
             <div class="panelHeader"
