@@ -10,7 +10,7 @@
     </#if>
 
 <#--##  if backlinks are present-->
-    <#if $backLinks??>
+    <#if backLinks??>
         <h3>Back link to Report Portal:</h3>
         <ul type="square">
         <#list $backlink as key,value>
