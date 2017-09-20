@@ -13,7 +13,7 @@
     <#if backLinks??>
         <h3>Back link to Report Portal:</h3>
         <ul type="square">
-        <#list $backlink as key,value>
+        <#list backlink as key,value>
                 <li><a href="${value}" rel="nofollow" title="Follow link">Link to defect</a></li>
         </#list>
         </ul>
