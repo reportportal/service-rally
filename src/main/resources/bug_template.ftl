@@ -10,10 +10,10 @@
     </#if>
 
 <#--##  if backlinks are present-->
-    <#if $backLinks??>
+    <#if backLinks??>
         <h3>Back link to Report Portal:</h3>
         <ul type="square">
-        <#list $backlink as key,value>
+        <#list backLinks as key,value>
                 <li><a href="${value}" rel="nofollow" title="Follow link">Link to defect</a></li>
         </#list>
         </ul>
@@ -34,7 +34,7 @@
 						    <pre style="white-space: pre-wrap; display: block;font-family: monospace;max-height: 30em;text-align: left;">${logEntry.message}</pre>
                         </div>
                     </#if>
-					##    if URL provided to screen source
+					<#--##    if URL provided to screen source-->
                     <#if logEntry.binaryDataId??>
                     <p><img src="${logEntry.binaryDataId}" align="absmiddle" border="0" height="366"><br class="atl-forced-newline"></p>
                     </#if>
