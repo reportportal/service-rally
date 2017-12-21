@@ -5,7 +5,7 @@ buildscript {
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.6.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE")
         classpath 'com.bmuschko:gradle-docker-plugin:3.0.12'
 
     }
@@ -33,8 +33,8 @@ targetCompatibility = 1.8
 
 dependencyManagement {
     imports {
-        mavenBom "org.springframework.cloud:spring-cloud-starter-parent:Dalston.SR3"
-        mavenBom "org.springframework.boot:spring-boot-dependencies:1.5.6.RELEASE"
+        mavenBom "org.springframework.cloud:spring-cloud-starter-parent:Edgware.RELEASE"
+        mavenBom "org.springframework.boot:spring-boot-dependencies:1.5.9.RELEASE"
     }
 }
 
@@ -53,11 +53,11 @@ repositories {
 
 dependencies {
     if (releaseMode) {
-        compile 'com.epam.reportportal:commons-bugtracking:3.3.1'
+        compile 'com.epam.reportportal:commons-bugtracking:4.0.0'
         compile 'com.epam.reportportal:commons:3.1.0'
 
     } else {
-        compile('com.github.reportportal:commons-bugtracking:3.3.1')
+        compile('com.github.reportportal:commons-bugtracking:4.0.0')
         compile 'com.github.reportportal:commons:3.1.0'
     }
 
