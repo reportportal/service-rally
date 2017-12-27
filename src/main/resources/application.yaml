@@ -22,8 +22,6 @@ rp:
   mongo:
     uri: mongodb://localhost:27017
     dbName: reportportal
-#        user: user
-#        password: 1q2w3e
     connectionsPerHost: 1000
     threadsAllowedToBlockForConnectionMultiplier: 1000
     connectTimeout: 20000
