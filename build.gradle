@@ -61,6 +61,7 @@ dependencies {
         compile 'com.github.reportportal:commons:3.1.0'
     }
 
+    compile("org.springframework.boot:spring-boot-starter-amqp")
 
     compile 'com.rallydev.rest:rally-rest-api:2.2.1'
     compile 'org.springframework.boot:spring-boot-starter-freemarker'
