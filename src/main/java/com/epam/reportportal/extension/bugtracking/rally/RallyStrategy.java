@@ -21,11 +21,11 @@
 package com.epam.reportportal.extension.bugtracking.rally;
 
 import com.epam.reportportal.commons.template.TemplateEngine;
+import com.epam.reportportal.extension.adapter.DataStorageAdapter;
+import com.epam.reportportal.extension.adapter.LogRepositoryAdapter;
+import com.epam.reportportal.extension.adapter.TestItemRepositoryAdapter;
 import com.epam.reportportal.extension.bugtracking.ExternalSystemStrategy;
 import com.epam.ta.reportportal.database.BinaryData;
-import com.epam.ta.reportportal.database.DataStorage;
-import com.epam.ta.reportportal.database.dao.LogRepository;
-import com.epam.ta.reportportal.database.dao.TestItemRepository;
 import com.epam.ta.reportportal.database.entity.ExternalSystem;
 import com.epam.ta.reportportal.database.entity.Log;
 import com.epam.ta.reportportal.database.entity.item.TestItem;
@@ -72,13 +72,13 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 	private static final String BUG_TEMPLATE_PATH = "bug_template.ftl";
 
 	@Autowired
-	private LogRepository logRepository;
+	private LogRepositoryAdapter logRepositoryAdapter;
 
 	@Autowired
-	private DataStorage dataStorage;
+	private DataStorageAdapter dataStorageAdapter;
 
 	@Autowired
-	private TestItemRepository testItemRepository;
+	private TestItemRepositoryAdapter testItemRepositoryAdapter;
 
 	@Autowired
 	private TemplateEngine templateEngine;
@@ -223,7 +223,7 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 
 	private List<LogEntry> loadTestItemLogs(final PostTicketRQ ticketRQ) {
 		List<Log> logs = ticketRQ.getBackLinks().size() == 1
-				? logRepository.findByTestItemRef(ticketRQ.getTestItemId(),
+				? logRepositoryAdapter.findByTestItemRef(ticketRQ.getTestItemId(),
 						ticketRQ.getNumberOfLogs() == 0 ? 50 : ticketRQ.getNumberOfLogs(), ticketRQ.getIsIncludeScreenshots())
 				: new ArrayList<>();
 		return logs.stream().map(log -> {
@@ -236,7 +236,7 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 	}
 
 	private String createDescription(PostTicketRQ ticketRQ, List<LogEntry> itemLogs) {
-		TestItem testItem = testItemRepository.findOne(ticketRQ.getTestItemId());
+		TestItem testItem = testItemRepositoryAdapter.findOne(ticketRQ.getTestItemId());
 		HashMap<Object, Object> templateData = new HashMap<>();
 		if (ticketRQ.getIsIncludeComments()) {
 			templateData.put("comments", testItem.getIssue().getIssueDescription());
@@ -296,7 +296,7 @@ public abstract class RallyStrategy implements ExternalSystemStrategy {
 
 	private RallyObject postImage(String itemRef, LogEntry log, RallyRestApi restApi) throws IOException {
 		String binaryId = log.getBinaryDataId();
-		BinaryData binaryData = dataStorage.fetchData(binaryId);
+		BinaryData binaryData = dataStorageAdapter.fetchData(binaryId);
 		byte[] bytes = ByteStreams.toByteArray(binaryData.getInputStream());
 		JsonObject attach = new JsonObject();
 		attach.addProperty(CONTENT, Base64.encodeBase64String(bytes));

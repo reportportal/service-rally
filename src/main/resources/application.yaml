@@ -95,4 +95,8 @@ eureka:
   client:
     register-with-eureka: true
     enabled: true
+##RabbitMQ
+---
+rabbit:
+  host: localhost
 ---
