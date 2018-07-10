@@ -57,7 +57,7 @@ dependencies {
         compile 'com.epam.reportportal:commons:3.1.0'
 
     } else {
-        compile('com.github.reportportal:commons-bugtracking:4.2.0')
+        compile('com.github.reportportal:commons-bugtracking:a1a2e7d')
         compile 'com.github.reportportal:commons:3.1.0'
     }
 
