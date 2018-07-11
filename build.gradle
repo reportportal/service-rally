@@ -80,6 +80,28 @@ jacocoTestReport {
 
 build.dependsOn jacocoTestReport
 
+jar {
+    archiveName = "${baseName}.${extension}"
+}
+
+task resolveDependencies {
+  doLast {
+    rootProject.allprojects { project ->
+      project.buildscript.configurations.forEach { configuration ->
+        if (configuration.isCanBeResolved()) {
+          configuration.resolve()
+        }
+      }
+
+      project.configurations.forEach { configuration ->
+        if (configuration.isCanBeResolved()) {
+          configuration.resolve()
+        }
+      }
+    }
+  }
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = '4.1'
 }
